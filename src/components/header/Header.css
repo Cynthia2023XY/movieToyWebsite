@@ -1,0 +1,14 @@
+.dark-modal .modal-content {
+  background-color: #1d2124;
+  color: white;
+}
+
+.dark-input {
+  background-color: #1d2124;
+  color: white;
+  border: 1px solid #ced4da;
+}
+
+.dark-input::placeholder {
+  color: #ced4da;
+}
