@@ -1,18 +1,25 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../context/LanguageContext"; // 引入LanguageContext
 import './Hero.css';
+// 导入 react-material-ui-carousel 库中的 Carousel 组件，用于创建轮播图
 import Carousel from 'react-material-ui-carousel';
+// 从 @mui/material 库中导入 Paper 组件，用于创建纸张样式的容器。
 import { Paper } from '@mui/material';
+// 从 @fortawesome/react-fontawesome 库中导入 FontAwesomeIcon 组件，用于显示图标
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// 从 @fortawesome/free-solid-svg-icons 库中导入 faCirclePlay 图
 import { faCirclePlay } from '@fortawesome/free-solid-svg-icons';
+// 导入 Link 和 useNavigate 组件，用于导航
 import { Link, useNavigate } from "react-router-dom";
+// 导入 Button 组件，用于创建按钮
 import Button from 'react-bootstrap/Button';
 
 const Hero = ({ movies }) => {
-	const { texts } = useContext(LanguageContext); // 使用LanguageContext
+	const { language, texts } = useContext(LanguageContext); // 使用LanguageContext
 	const navigate = useNavigate();
 
 	function reviews(movieId) {
+        // 使用 navigate 函数导航到 /Reviews/${movieId} 路径
 		navigate(`/Reviews/${movieId}`);
 	}
 
@@ -30,7 +37,10 @@ const Hero = ({ movies }) => {
 												<img src={movie.poster} alt="" />
 											</div>
 											<div className="movie-title">
-												<h4>{movie.title}</h4>
+												<h4>
+													{movie.title}
+													{language === 'zh' && <><br />{movie.titleZh}</>}
+												</h4>
 											</div>
 											<div className="movie-buttons-container">
 												<Link to={`/Trailer/${movie.trailerLink.substring(movie.trailerLink.length - 11)}`}>
@@ -58,3 +68,4 @@ const Hero = ({ movies }) => {
 }
 
 export default Hero;
+

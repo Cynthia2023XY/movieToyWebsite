@@ -2,6 +2,7 @@
     {
       "imdbId": "tt3915174",
       "title": "Puss in Boots: The Last Wish",
+      "titleZh": "穿靴子的猫：最后的愿望",
       "releaseDate": "2022-12-21",
       "trailerLink": "https://www.youtube.com/watch?v=tHb7WlgyaUc",
       "genres": [
@@ -29,6 +30,7 @@
     {
       "imdbId": "tt1630029",
       "title": "Avatar: The Way of Water",
+      "titleZh": "阿凡达：水之道",
       "releaseDate": "2022-12-16",
       "trailerLink": "https://www.youtube.com/watch?v=d9MyW72ELq0",
       "genres": [
@@ -54,6 +56,7 @@
     {
       "imdbId": "tt8760708",
       "title": "M3GAN",
+      "titleZh": "梅根",
       "releaseDate": "2023-01-06",
       "trailerLink": "https://www.youtube.com/watch?v=BRb4U99OU80",
       "genres": [
@@ -79,6 +82,7 @@
     {
       "imdbId": "tt11116912",
       "title": "Troll",
+      "titleZh": "巨魔",
       "releaseDate": "2022-12-01",
       "trailerLink": "https://www.youtube.com/watch?v=AiohkY_XQYQ",
       "genres": [
@@ -104,6 +108,7 @@
     {
       "imdbId": "tt6443346",
       "title": "Black Adam",
+      "titleZh": "黑亚当",
       "releaseDate": "2022-10-19",
       "trailerLink": "https://www.youtube.com/watch?v=JaV7mmc9HGw",
       "genres": [
@@ -129,6 +134,7 @@
     {
       "imdbId": "tt0499549",
       "title": "Avatar",
+      "titleZh": "阿凡达",
       "releaseDate": "2009-12-15",
       "trailerLink": "https://www.youtube.com/watch?v=5PSNL1qE6VY",
       "genres": [
@@ -155,6 +161,7 @@
     {
       "imdbId": "tt3447590",
       "title": "Roald Dahl's Matilda the Musical",
+      "titleZh": "玛蒂尔达：音乐剧",
       "releaseDate": "2022-11-25",
       "trailerLink": "https://www.youtube.com/watch?v=lroAhsDr2vI",
       "genres": [
@@ -180,6 +187,7 @@
     {
       "imdbId": "tt9114286",
       "title": "Black Panther: Wakanda Forever",
+      "titleZh": "黑豹：瓦坎达万岁",
       "releaseDate": "2022-11-11",
       "trailerLink": "https://www.youtube.com/watch?v=_Z3QKkl1WyM",
       "genres": [
@@ -205,6 +213,7 @@
     {
       "imdbId": "tt10298840",
       "title": "Strange World",
+      "titleZh": "奇异世界",
       "releaseDate": "2022-11-23",
       "trailerLink": "https://www.youtube.com/watch?v=bKh2G73gCCs",
       "genres": [
@@ -219,7 +228,7 @@
         "https://image.tmdb.org/t/p/original/zNIlXd7CAz0hHAInbs2nsFRc0xQ.jpg",
         "https://image.tmdb.org/t/p/original/1rukJHAP5p6DNHe75Oo1D0m3SnR.jpg",
         "https://image.tmdb.org/t/p/original/aKbe411WyjTZy1OZUVIdNDYVf21.jpg",
-        "https://image.tmdb.org/t/p/original/9RKvxz0IryD2ofLYyGpnE7HeWlR.jpg",
+        "https://image.tmdb.org/t/p/original/9RKvxz0IrnX1kvyIY3K5ajaiNfI.jpg",
         "https://image.tmdb.org/t/p/original/kFURsDklj7QGMMkGJVwDBaJJn05.jpg",
         "https://image.tmdb.org/t/p/original/v6oBDkd7ogXzTQxIU0H5SXq0hOL.jpg",
         "https://image.tmdb.org/t/p/original/fBshLiEJcjdfrU3qQBIINcePSsm.jpg",
@@ -231,6 +240,7 @@
     {
       "imdbId": "tt8093700",
       "title": "The Woman King",
+      "titleZh": "女人王",
       "releaseDate": "2022-09-15",
       "trailerLink": "https://www.youtube.com/watch?v=3RDaPV_rJ1Y",
       "genres": [
