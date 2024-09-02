@@ -62,6 +62,16 @@
     color:white;
 }
 
+.movie-review-button-container {
+    display: flex;
+    align-items: center;
+}
+
+.movie-review-button-container .btn {
+    font-size: 1rem; /* 确保按钮文本大小合适 */
+    padding: 0.5rem 1rem; /* 调整按钮内边距 */
+}
+
 @media only screen and (max-width: 800px) {
     .movie-detail{
         flex-direction: column;

@@ -1,5 +1,6 @@
+import { useContext, useState } from "react";
+import { LanguageContext } from "../../context/LanguageContext"; // 引入LanguageContext
 import './Header.css'; // 引入自定义的CSS文件
-import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faVideoSlash } from "@fortawesome/free-solid-svg-icons";
 import Button from "react-bootstrap/Button";
@@ -9,8 +10,10 @@ import Navbar from "react-bootstrap/Navbar";
 import { NavLink } from "react-router-dom";
 import Modal from "react-bootstrap/Modal";
 import Form from "react-bootstrap/Form";
+import Dropdown from "react-bootstrap/Dropdown"; // 引入Dropdown组件
 
 const Header = () => {
+  const { language, toggleLanguage, texts } = useContext(LanguageContext); // 使用LanguageContext
   const [showLogin, setShowLogin] = useState(false);
   const [showRegister, setShowRegister] = useState(false);
 
@@ -32,31 +35,40 @@ const Header = () => {
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <NavLink className="nav-link" to="/">Home</NavLink>
-            <NavLink className="nav-link" to="/watchList">Watch List</NavLink>
+            <NavLink className="nav-link" to="/">{texts.home}</NavLink>
+            <NavLink className="nav-link" to="/watchList">{texts.watchList}</NavLink>
           </Nav>
-          <Button variant="outline-info" className="me-2" onClick={handleLoginShow}>Login</Button>
-          <Button variant="outline-info" onClick={handleRegisterShow}>Register</Button>
+          <Button variant="outline-info" className="me-2" onClick={handleLoginShow}>{texts.login}</Button>
+          <Button variant="outline-info" onClick={handleRegisterShow}>{texts.register}</Button>
+          <Dropdown align="end" className="ms-2">
+            <Dropdown.Toggle variant="outline-info" id="dropdown-basic">
+              {language === 'en' ? 'English' : '中文'}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item onClick={() => toggleLanguage('en')}>English</Dropdown.Item>
+              <Dropdown.Item onClick={() => toggleLanguage('zh')}>中文</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
         </Navbar.Collapse>
       </Container>
 
       {/* Login Modal */}
       <Modal show={showLogin} onHide={handleLoginClose} className="dark-modal">
         <Modal.Header closeButton>
-          <Modal.Title>Login</Modal.Title>
+          <Modal.Title>{texts.login}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" className="dark-input" />
+              <Form.Label>{texts.email}</Form.Label>
+              <Form.Control type="email" placeholder={texts.email} className="dark-input" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" className="dark-input" />
+              <Form.Label>{texts.password}</Form.Label>
+              <Form.Control type="password" placeholder={texts.password} className="dark-input" />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              {texts.submit}
             </Button>
           </Form>
         </Modal.Body>
@@ -65,24 +77,24 @@ const Header = () => {
       {/* Register Modal */}
       <Modal show={showRegister} onHide={handleRegisterClose} className="dark-modal">
         <Modal.Header closeButton>
-          <Modal.Title>Register</Modal.Title>
+          <Modal.Title>{texts.register}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Form>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type="email" placeholder="Enter email" className="dark-input" />
+              <Form.Label>{texts.email}</Form.Label>
+              <Form.Control type="email" placeholder={texts.email} className="dark-input" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-              <Form.Label>Password</Form.Label>
-              <Form.Control type="password" placeholder="Password" className="dark-input" />
+              <Form.Label>{texts.password}</Form.Label>
+              <Form.Control type="password" placeholder={texts.password} className="dark-input" />
             </Form.Group>
             <Form.Group className="mb-3" controlId="formBasicConfirmPassword">
-              <Form.Label>Confirm Password</Form.Label>
-              <Form.Control type="password" placeholder="Confirm Password" className="dark-input" />
+              <Form.Label>{texts.confirmPassword}</Form.Label>
+              <Form.Control type="password" placeholder={texts.confirmPassword} className="dark-input" />
             </Form.Group>
             <Button variant="primary" type="submit">
-              Submit
+              {texts.submit}
             </Button>
           </Form>
         </Modal.Body>
